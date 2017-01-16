@@ -1,0 +1,13 @@
+Copyright (c) 2017 Emilio Cabrera <emilio1625@gmail.com>
+
+# Quartus files
+*.db_info
+*.sci
+*.qsf
+*.qws
+*.qpf
+*.ipinfo
+*/db
+*/incremental_db
+*/output_files
+*/simulation
