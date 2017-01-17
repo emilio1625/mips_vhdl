@@ -7,6 +7,9 @@ Copyright (c) 2017 Emilio Cabrera <emilio1625@gmail.com>
 *.qws
 *.qpf
 *.ipinfo
+*.rpt
+*.bak
+*.temp
 */db
 */incremental_db
 */output_files
