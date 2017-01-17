@@ -9,9 +9,8 @@ entity instruction_fetch is
     port (
         clock      : in  std_logic;
         -- Indican si debemos brincar (1), o calcular de forma normal el valor de PC (0)
-        branch, jmp: in  std_logic := '0';
+        jmp        : in  std_logic := '0';
         -- Direccion a donde saltar
-        branch_addr: in  std_logic_vector(31 downto 0);
         jmp_addr   : in  std_logic_vector(31 downto 0);
         -- Instruccion que sera enviada a Instruction Decode
         instruction: out std_logic_vector(31 downto 0);
@@ -36,8 +35,6 @@ begin
         if rising_edge(clock) then
             if stall = '1' then
                 pc <= pc; -- no modifiques el contenido del PC
-            elsif branch = '1' then -- realiza un salto
-                pc <= branch_addr(31 downto 2);
             elsif jmp = '1' then -- realiza un salto
                 pc <= jmp_addr(31 downto 2);
             else
