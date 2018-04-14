@@ -7,7 +7,7 @@ use ieee.std_logic_1164.all;
 entity sign_ext is
   port (
     data_in:  in  std_logic_vector(15 downto 0);
-    data_out: out std_logic_vector(31 downto 0);
+    data_out: out std_logic_vector(31 downto 0)
   );
 end entity;
 

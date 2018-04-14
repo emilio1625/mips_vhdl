@@ -6,10 +6,10 @@ entity register_file is
   port (
     clock   : in  std_logic;
     we      : in  std_logic;
-    wr_reg  : in  std_logic_vector(4  downto 0);
+    wr_reg  : in  std_logic_vector( 4 downto 0);
     wr_data : in  std_logic_vector(31 downto 0);
-    rd_reg1 : in  std_logic_vector(4  downto 0);
-    rd_reg2 : in  std_logic_vector(4  downto 0);
+    rd_reg1 : in  std_logic_vector( 4 downto 0);
+    rd_reg2 : in  std_logic_vector( 4 downto 0);
     rd_data1: out std_logic_vector(31 downto 0);
     rd_data2: out std_logic_vector(31 downto 0)
   );
