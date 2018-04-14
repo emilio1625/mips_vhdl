@@ -21,7 +21,7 @@ entity memory_stage is
     ma_data     : in  std_logic_vector(31 downto 0);
     reg_dest_wb : out std_logic_vector( 4 downto 0);
     data_out_wb : out std_logic_vector(31 downto 0);
-    stall_wb    : out std_logic_vector(31 downto 0)
+    stall_wb    : out std_logic
   );
 end entity;
 
@@ -32,7 +32,7 @@ architecture arch of memory_stage is
 	signal temp_reg : std_logic_vector(31 downto 0);
 	signal reg_dest : std_logic_vector( 4 downto 0);
 	signal mem_data : std_logic_vector(31 downto 0);
-    signal stall_w  : std_logic;
+   signal stall_w  : std_logic;
 begin
     ram: entity work.ram port map(
         clock    => clock,
